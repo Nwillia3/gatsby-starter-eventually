@@ -4,10 +4,10 @@
   "version": "1.0.0",
   "author": "Steven Natera",
   "dependencies": {
+    "@nodox/gatsby": "^1.10.1",
+    "@nodox/gatsby-cli": "^1.2.2",
     "classnames": "^2.2.6",
     "fs-extra": "^7.0.0",
-    "gatsby": "^1.9.247",
-    "gatsby-cli": "^1.1.58",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-catch-links": "^1.0.24",
     "gatsby-plugin-react-helmet": "^2.0.11",
