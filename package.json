@@ -5,7 +5,7 @@
   "author": "Steven Natera",
   "dependencies": {
     "@nodox/gatsby": "^1.10.1",
-    "@nodox/gatsby-cli": "^1.2.2",
+    "@nodox/gatsby-cli": "^1.2.3",
     "classnames": "^2.2.6",
     "fs-extra": "^7.0.0",
     "gatsby-link": "^1.6.40",
