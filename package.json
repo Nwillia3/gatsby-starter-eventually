@@ -1,7 +1,7 @@
 {
   "name": "gatsby-theme-identity",
   "description": "Gatsby port of HTML5UP Identity",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Steven Natera <tektekpush@gmail.com>",
   "dependencies": {
     "@nodox/gatsby": "^1.10.4",
