@@ -1,34 +1,35 @@
-let contentfulConfig
+let sitePlugins = [
+  'gatsby-plugin-react-next',
+  'gatsby-plugin-catch-links',
+]
 
-try {
-  contentfulConfig = require('./.contentful')
-} catch (_) {
-  contentfulConfig = {
-    spaceId: process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.CONTENTFUL_DELIVERY_TOKEN,
-  }
-} finally {
-  const { spaceId, accessToken } = contentfulConfig
 
-  if (!spaceId || !accessToken) {
-    throw new Error(
-      'Contentful spaceId and the delivery token need to be provided.'
-    )
+const shouldUseContentful = (plugin) => {
+  return (process.env.CONTENTFUL_SPACE_ID && process.env.CONTENTFUL_DELIVERY_TOKEN)
+}
+
+const loadPlugins = () => {
+
+  if (shouldUseContentful()) {
+    const contentfulPlugin = {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_DELIVERY_TOKEN,
+      },
+    }
+
+    sitePlugins.push(contentfulPlugin)
   }
+
+  return sitePlugins
 }
 
 module.exports = {
   pathPrefix: process.env.CI ? `/identity` : `/`,
   siteMetadata: {
     author: 'You!',
-    title: `Gatsby Default (Blog) Starter`,
+    title: `Gatsby theme starter`,
   },
-  plugins: [
-    'gatsby-plugin-react-next',
-    'gatsby-plugin-catch-links',
-    {
-      resolve: `gatsby-source-contentful`,
-      options: contentfulConfig,
-    },
-  ],
+  plugins: loadPlugins(),
 }
