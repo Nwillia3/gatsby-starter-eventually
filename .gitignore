@@ -1,8 +1,16 @@
 # Project dependencies
+<<<<<<< HEAD
+=======
+.DS_Store
+>>>>>>> 6c3f5b76accfb14aae1bb40479f5e23c4a32edc9
 .cache
 node_modules
 yarn-error.log
 
 # Build directory
+<<<<<<< HEAD
 /public
+=======
+public
+>>>>>>> 6c3f5b76accfb14aae1bb40479f5e23c4a32edc9
 .DS_Store

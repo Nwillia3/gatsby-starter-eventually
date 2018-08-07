@@ -21,6 +21,10 @@ cd gatsby-example-site
 gatsby develop
 ```
 
+<<<<<<< HEAD
 ## Deploy
+=======
+## Deploy here
+>>>>>>> 6c3f5b76accfb14aae1bb40479f5e23c4a32edc9
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
